@@ -4,18 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//test commit - adding .gitignore file
+
 namespace ACM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+        }
+        public Customer( int customerID)
+        {
+            CustomerId = customerID;
+        }
+
         public int CustomerId { get; private set; }
-
         public string EmailAdress { get; set; }
-
         public string FirstName { get; set; }
-
-        // public string LastName { get; set; } teste commit git
-
+        private string _lastName;
+        public string LastName
+        {
+            get
+            {
+                return _lastName;
+            }
+            set
+            {
+                _lastName = value;
+            }
+        }
         public string FullName
         {
             get
@@ -32,19 +49,20 @@ namespace ACM.BL
                 return fullName;
             }
         }
-
-        private string _lastName;
-
-        public string LastName
+        public static int InstanceCount { get; set; }  
+        
+        /// <summary>
+        /// Validates the customer data.
+        /// </summary>
+        public bool Validate()
         {
-            get
-            {
-                return _lastName;
-            }
-            set
-            {
-                _lastName = value;
-            }
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAdress)) isValid = false;
+
+            return isValid;
+
         }
     }
 }
