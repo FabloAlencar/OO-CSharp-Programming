@@ -14,7 +14,7 @@ namespace ACM.BL
 
         public string FirstName { get; set; }
 
-        // public string LastName { get; set; } teste commit git
+        // public string LastName { get; set; } teste commit git v2
 
         public string FullName
         {
