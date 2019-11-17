@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 //test commit - adding .gitignore file
 
@@ -10,18 +6,25 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer() : this(0)
         {
-        }
-        public Customer( int customerID)
-        {
-            CustomerId = customerID;
         }
 
+        public Customer(int customerID)
+        {
+            CustomerId = customerID;
+            AdressList = new List<Address>();
+        }
+
+        //public Address WorkAddress { get; set; }
+        //public Address HomeAddress { get; set; }
+        public List<Address> AdressList { get; set; }
+
         public int CustomerId { get; private set; }
-        public string EmailAdress { get; set; }
+        public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         private string _lastName;
+
         public string LastName
         {
             get
@@ -33,6 +36,7 @@ namespace ACM.BL
                 _lastName = value;
             }
         }
+
         public string FullName
         {
             get
@@ -49,8 +53,9 @@ namespace ACM.BL
                 return fullName;
             }
         }
-        public static int InstanceCount { get; set; }  
-        
+
+        public static int InstanceCount { get; set; }
+
         /// <summary>
         /// Validates the customer data.
         /// </summary>
@@ -59,10 +64,9 @@ namespace ACM.BL
             var isValid = true;
 
             if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(EmailAdress)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
-
         }
     }
 }

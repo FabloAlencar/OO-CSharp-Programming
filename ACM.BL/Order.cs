@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BLTest
 {
@@ -10,7 +6,6 @@ namespace ACM.BLTest
     {
         public Order()
         {
-
         }
 
         public Order(int orderId)
@@ -32,6 +27,5 @@ namespace ACM.BLTest
 
             return isValid;
         }
-
     }
 }

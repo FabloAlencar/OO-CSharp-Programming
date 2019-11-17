@@ -1,20 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class CustomerRepository
+    public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+
+        private AddressRepository addressRepository { get; set; }
 
         /// <summary>
         /// Retrieve one costumer.
         /// </summary>
-        public Customer Retrieve(int customerID)
+        public Customer Retrieve(int customerId)
         {
-            return new Customer();
+            // Create the instance of the Customer class
+            // Pass in the customer id
+            Customer customer = new Customer(customerId);
+
+            // Code that retrieves the defined customer
+
+            // Temporary har-coded values to return
+            // a populated customer
+            if (customerId == 1)
+            {
+                customer.EmailAddress = "fablo.alencar@hotmail.com";
+                customer.FirstName = "Fablo";
+                customer.LastName = "Alencar";
+                customer.AdressList = addressRepository.RetrieveByCustomerID(customerId).
+                                            ToList();
+            }
+            return customer;
         }
 
         /// <summary>
@@ -33,6 +52,5 @@ namespace ACM.BL
         {
             return true;
         }
-
     }
 }
