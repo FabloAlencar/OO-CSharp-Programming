@@ -1,5 +1,4 @@
-﻿using System;
-using ACM.BL;
+﻿using ACM.BL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ACM.BLTest
@@ -91,7 +90,7 @@ namespace ACM.BLTest
             Customer customer = new Customer
             {
                 LastName = "Bilbo",
-                EmailAdress = "Bilbo@teressa.com"
+                EmailAddress = "Bilbo@teressa.com"
             };
 
             bool expected = true;
@@ -109,17 +108,16 @@ namespace ACM.BLTest
             //-- Arrange
             Customer customer = new Customer
             {
-                EmailAdress = "Bilbo@teressa.com"
+                EmailAddress = "Bilbo@teressa.com"
             };
 
             bool expected = false;
-              
+
             //-- Act
             bool actual = customer.Validate();
 
             //--Assert
             Assert.AreEqual(expected, actual);
         }
-
     }
 }

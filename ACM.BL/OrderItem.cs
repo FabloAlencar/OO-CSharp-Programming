@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    class OrderItem
+    internal class OrderItem
     {
         public OrderItem()
         {
-
         }
 
         public OrderItem(int ordemItemId)
@@ -22,7 +17,6 @@ namespace ACM.BL
         public int ProductId { get; set; }
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
-
 
         /// <summary>
         /// Retrieve one order item .
@@ -56,13 +50,11 @@ namespace ACM.BL
         {
             var isValid = true;
 
-            if (Quantity  <= 0)         isValid = false;
-            if (ProductId <= 0)         isValid = false;
-            if (PurchasePrice == null)  isValid = false;
-            
+            if (Quantity <= 0) isValid = false;
+            if (ProductId <= 0) isValid = false;
+            if (PurchasePrice == null) isValid = false;
+
             return isValid;
-
         }
-
     }
 }

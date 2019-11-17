@@ -1,20 +1,30 @@
-﻿using System;
+﻿using ACM.BLTest;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class ProductRepository
+    public class ProductRepository
     {
-
         /// <summary>
         /// Retrieve one product.
         /// </summary>
-        public Product Retrieve(int ProductId)
+        public Product Retrieve(int productId)
         {
-            return new Product();
+            // Create the instance of the Product class
+            // Pass in the product id
+            Product product = new Product(productId);
+
+            // Code that retrieves the defined product
+
+            // Temporary hard-coded values to return
+            // a populated product
+            if (productId == 2)
+            {
+                product.ProductName = "C# Book";
+                product.Description = "C# Programming";
+                product.CurrentPrice = 50.65M;
+            }
+            return product;
         }
 
         /// <summary>
@@ -33,6 +43,5 @@ namespace ACM.BL
         {
             return true;
         }
-
     }
 }
