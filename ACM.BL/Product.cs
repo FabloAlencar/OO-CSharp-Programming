@@ -1,4 +1,4 @@
-﻿namespace ACM.BLTest
+﻿namespace ACM.BL
 {
     public class Product
     {

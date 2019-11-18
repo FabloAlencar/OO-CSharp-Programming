@@ -30,7 +30,7 @@ namespace ACM.BL
                 customer.EmailAddress = "fablo.alencar@hotmail.com";
                 customer.FirstName = "Fablo";
                 customer.LastName = "Alencar";
-                customer.AdressList = addressRepository.RetrieveByCustomerID(customerId).
+                customer.AddressList = addressRepository.RetrieveByCustomerID(customerId).
                                             ToList();
             }
             return customer;

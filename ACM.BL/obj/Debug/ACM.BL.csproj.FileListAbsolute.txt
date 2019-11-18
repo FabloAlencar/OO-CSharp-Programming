@@ -7,3 +7,4 @@ C:\Users\Fablo\Desktop\.NET (C#) Training\source\OO-CSharp-Programming\ACM.BL\bi
 C:\Users\Fablo\Desktop\.NET (C#) Training\source\OO-CSharp-Programming\ACM.BL\bin\Debug\ACM.BL.pdb
 C:\Users\Fablo\Desktop\.NET (C#) Training\source\OO-CSharp-Programming\ACM.BL\obj\Debug\ACM.BL.dll
 C:\Users\Fablo\Desktop\.NET (C#) Training\source\OO-CSharp-Programming\ACM.BL\obj\Debug\ACM.BL.pdb
+C:\Users\Fablo\Desktop\.NET (C#) Training\source\OO-CSharp-Programming\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache

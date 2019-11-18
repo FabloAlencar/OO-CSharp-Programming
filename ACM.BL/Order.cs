@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace ACM.BLTest
+namespace ACM.BL
 {
     public class Order
     {
@@ -13,8 +14,11 @@ namespace ACM.BLTest
             OrderId = orderId;
         }
 
-        public int OrderId { get; private set; }
+        public int CustomerID { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
+        public int OrderId { get; private set; }
+        public List<OrderItem> OrdemItems { get; set; }
+        public int ShippingAddressId { get; set; }
 
         /// <summary>
         /// Validates the order data.

@@ -2,7 +2,7 @@
 
 namespace ACM.BL
 {
-    internal class OrderItem
+    public class OrderItem
     {
         public OrderItem()
         {

@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-//test commit - adding .gitignore file
-
 namespace ACM.BL
 {
     public class Customer
@@ -13,14 +11,15 @@ namespace ACM.BL
         public Customer(int customerID)
         {
             CustomerId = customerID;
-            AdressList = new List<Address>();
+            AddressList = new List<Address>();
         }
 
         //public Address WorkAddress { get; set; }
         //public Address HomeAddress { get; set; }
-        public List<Address> AdressList { get; set; }
+        public List<Address> AddressList { get; set; }
 
         public int CustomerId { get; private set; }
+        public int CustomerType { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         private string _lastName;
