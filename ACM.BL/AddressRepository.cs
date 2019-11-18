@@ -3,6 +3,7 @@
 namespace ACM.BL
 {
     public class AddressRepository
+
     {
         /// <summary>
         /// Retrieve one order.
@@ -69,7 +70,6 @@ namespace ACM.BL
 
             return addressList;
         }
-
 
         /// <summary>
         /// Saves the current address.
