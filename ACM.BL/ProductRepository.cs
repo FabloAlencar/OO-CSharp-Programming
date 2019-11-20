@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ACM.BL
 {
@@ -23,6 +24,11 @@ namespace ACM.BL
                 product.Description = "C# Programming";
                 product.CurrentPrice = 50.65M;
             }
+            Object myObject = new object();
+
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
+
             return product;
         }
 
@@ -38,9 +44,30 @@ namespace ACM.BL
         /// <summary>
         /// Saves the current product.
         /// </summary>
-        public bool Save()
+        public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // Call an Insert Stored Procedure
+                    }
+                    else
+                    {
+                        // Call an Update Stored Procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }
