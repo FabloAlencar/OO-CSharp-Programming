@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public Order()
         {
@@ -20,10 +20,13 @@ namespace ACM.BL
         public List<OrderItem> OrdemItems { get; set; }
         public int ShippingAddressId { get; set; }
 
+        public override string ToString() =>
+            $"{OrderDate.Value.Date} ({OrderId})";
+
         /// <summary>
         /// Validates the order data.
         /// </summary>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
