@@ -39,6 +39,7 @@ namespace ACM.BL
 
         /// <summary>
         /// Validates the product data.
+        /// Validates the product data.
         /// </summary>
         public override bool Validate()
         {
