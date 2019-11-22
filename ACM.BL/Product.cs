@@ -2,7 +2,7 @@
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -38,7 +38,6 @@ namespace ACM.BL
         public override string ToString() => ProductName;
 
         /// <summary>
-        /// Validates the product data.
         /// Validates the product data.
         /// </summary>
         public override bool Validate()

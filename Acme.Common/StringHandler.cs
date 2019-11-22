@@ -23,8 +23,6 @@ namespace Acme.Common
                 {
                     if (char.IsUpper(letter))
                     {
-                        Console.WriteLine($"Result= '{result}'");
-                        Console.WriteLine($"Letter= '{letter}'");
                         // Trim any spaces already there
                         result = result.Trim();
                         result += " ";

@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LiggingService.cs" />
+    <Compile Include="ILoggable.cs" />
+    <Compile Include="LoggingService.cs" />
     <Compile Include="StringHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

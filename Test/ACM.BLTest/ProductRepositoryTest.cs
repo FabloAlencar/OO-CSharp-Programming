@@ -11,7 +11,6 @@ namespace ACM.BLTest
         public void ValidRetrieve()
         {
             //-- Arrange
-            //-- Arrange
             var productRepository = new ProductRepository();
             var expected = new Product(2)
             {
