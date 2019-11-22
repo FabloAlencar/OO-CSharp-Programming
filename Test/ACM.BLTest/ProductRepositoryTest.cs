@@ -16,7 +16,7 @@ namespace ACM.BLTest
             {
                 CurrentPrice = 50.65M,
                 ProductName = "C# Book",
-                Description = "C# Programming"
+                ProductDescription = "C# Programming"
             };
 
             //-- Act
@@ -24,7 +24,7 @@ namespace ACM.BLTest
 
             //--Assert
             Assert.AreEqual(expected.ProductName, actual.ProductName);
-            Assert.AreEqual(expected.Description, actual.Description);
+            Assert.AreEqual(expected.ProductDescription, actual.ProductDescription);
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
         }
 
@@ -37,7 +37,7 @@ namespace ACM.BLTest
             {
                 CurrentPrice = 18M,
                 ProductName = "Assorted Title Set of 4",
-                Description = "Channels Programming",
+                ProductDescription = "Channels Programming",
                 HasChanges = true
             };
 
@@ -57,7 +57,7 @@ namespace ACM.BLTest
             {
                 CurrentPrice = null,
                 ProductName = "Assorted Title Set of 4",
-                Description = "Channels Programming",
+                ProductDescription = "Channels Programming",
                 HasChanges = true
             };
 

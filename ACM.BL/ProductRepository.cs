@@ -21,7 +21,7 @@ namespace ACM.BL
             if (productId == 2)
             {
                 product.ProductName = "C# Book";
-                product.Description = "C# Programming";
+                product.ProductDescription = "C# Programming";
                 product.CurrentPrice = 50.65M;
             }
             Object myObject = new object();

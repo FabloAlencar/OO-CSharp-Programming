@@ -55,6 +55,9 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
+        public string Log() =>
+            $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
+
         public override string ToString() => FullName;
 
         /// <summary>
